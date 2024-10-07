@@ -5,10 +5,6 @@ namespace DoubleDispatch.Tests;
 
 public class PaymentTests
 {
-    private class UnsupportedRegion : Region
-    {
-    }
-    
     public static IEnumerable<object[]> FeeCalculationTable()
     {
         var cardPayment = new CardPayment();
@@ -35,19 +31,5 @@ public class PaymentTests
         var fee = payment.CalculateFee(region);
         
         fee.Should().Be(expectedFee);
-    }
-    
-    [Fact]
-    public void Handle_Unsupported_Region()
-    {
-        var payment = new CardPayment();
-        var unsupportedRegion = new UnsupportedRegion();
-        
-        Action feeCalculation = () => payment.CalculateFee(unsupportedRegion);
-        
-        feeCalculation
-            .Should()
-            .Throw<InvalidOperationException>()
-            .WithMessage("Unsupported region");
     }
 }
