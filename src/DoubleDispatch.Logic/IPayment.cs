@@ -4,5 +4,5 @@ public interface IPayment
 {
     // Other payment-related methods are omitted for brevity
     
-    decimal CalculateFee(Region region);
+    decimal CalculateFee(dynamic region);
 }
