@@ -1,20 +1,9 @@
 namespace DoubleDispatch.Logic;
 
-public class BankTransferPayment : Payment
+public class BankTransferPayment : IPayment
 {
-    protected override decimal CalculateFeeForRegion(Europe region)
+    public decimal CalculateFee(Region region)
     {
-        // More complex fee calculation logic is implemented here,
-        // but a fixed value is used for brevity
-        
-        return 2.10m;
-    }
-
-    protected override decimal CalculateFeeForRegion(NorthAmerica region)
-    {
-        // More complex fee calculation logic is implemented here,
-        // but a fixed value is used for brevity
-        
-        return 2.75m;
+        return region.CalculateFeeForPayment(this);
     }
 }

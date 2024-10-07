@@ -1,20 +1,9 @@
 namespace DoubleDispatch.Logic;
 
-public class DigitalWalletPayment : Payment
+public class DigitalWalletPayment : IPayment
 {
-    protected override decimal CalculateFeeForRegion(Europe region)
+    public decimal CalculateFee(Region region)
     {
-        // More complex fee calculation logic is implemented here,
-        // but a fixed value is used for brevity
-        
-        return 1.10m;
-    }
-
-    protected override decimal CalculateFeeForRegion(NorthAmerica region)
-    {
-        // More complex fee calculation logic is implemented here,
-        // but a fixed value is used for brevity
-        
-        return 0.90m;
+        return region.CalculateFeeForPayment(this);
     }
 }
