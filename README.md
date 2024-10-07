@@ -27,13 +27,13 @@ To navigate between the implementation steps:
    
    Run the following command to see all available tags:
 
-   git tag
+   `git tag`
 
 3. **Checkout a Tag**:
    
    To view the code at a specific step, use the checkout command:
 
-   git checkout `tag name`
+   `git checkout tag name`
 
 ## Repository Structure ##
 
