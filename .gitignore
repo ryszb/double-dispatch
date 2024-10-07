@@ -1,0 +1,54 @@
+# Rider
+.idea/
+*.sln.iml
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bin/
+obj/
+out/
+
+# Visual Studio specific files
+.vscode/
+*.user
+*.suo
+*.sln.cache
+*.sln.ide
+*.ncb
+*.userprefs
+*.sln.ide
+*.pidb
+*.tss
+
+# Rider specific files
+.idea/
+*.sln.iml
+*.dotSettings
+
+# NuGet Packages
+*.nupkg
+packages/
+*.snupkg
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Other
+*.DS_Store
+*.pdb
+*.mdb
+*.cache
+*.db
+
+# User-specific files
+*.userprefs
+*.sln.ide
+*.ncb
